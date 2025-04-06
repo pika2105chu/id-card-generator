@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>ID Card Generator</h2>
+    <form id="idForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="year" placeholder="Year" required>
+        <input type="text" id="section" placeholder="Section" required>
+        <input type="text" id="branch" placeholder="Branch" required>
+        <input type="text" id="bloodGroup" placeholder="Blood Group" required>
+        <input type="text" id="enrollment" placeholder="Enrollment No." required>
+        <input type="text" id="mobile" placeholder="Mobile No." required>
+        <input type="file" id="photo" accept="image/*" required>
+        <button type="button" onclick="generateID()">Generate ID</button>
+    </form>
+</div>
+
+<!-- ID Card Display -->
+<div class="id-card-container" id="idCardContainer" style="display: none;">
+    <div class="id-card">
+        <div class="profile-container">
+            <img id="profileImg" class="profile-img" alt="Profile Photo">
+        </div>
+        <div class="info">
+            <h2 id="cardName"></h2>
+            <p><strong>Year:</strong> <span id="cardYear"></span></p>
+            <p><strong>Section:</strong> <span id="cardSection"></span></p>
+            <p><strong>Branch:</strong> <span id="cardBranch"></span></p>
+            <p><strong>Blood Group:</strong> <span id="cardBloodGroup"></span></p>
+            <p><strong>Enrollment No.:</strong> <span id="cardEnrollment"></span></p>
+            <p><strong>Mobile No.:</strong> <span id="cardMobile"></span></p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
